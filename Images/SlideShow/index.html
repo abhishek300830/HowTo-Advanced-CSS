@@ -4,88 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style sheet -->
+    <link rel="stylesheet" href="style.css">
     <title>Slide show</title>
 </head>
-<!-- style sheet -->
-
-<style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    .container {
-        width: 100%;
-        height: auto;
-    }
-
-    .slides {
-        margin: auto;
-        display: none;
-    }
-
-    img {
-        width: 100%;
-        transition: all .4s ease-in-out;
-        animation: smooth 1s;
-    }
-
-    .next,
-    .prev {
-        cursor: pointer;
-        position: absolute;
-        top: 30%;
-        z-index: 10;
-        color: white;
-        font-size: 50px;
-        width: 60px;
-        height: 70px;
-        text-align: center;
-
-
-        &:hover {
-            background-color: grey;
-
-        }
-    }
-
-    .next {
-        right: 0;
-    }
-
-    .prev {
-        left: 0;
-    }
-
-    .dots {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: -20px;
-
-    }
-
-    .dot {
-        height: 15px;
-        width: 15px;
-        background-color: grey;
-        border-radius: 10px;
-    }
-
-    @keyframes smooth {
-        from {
-            transform: skewX(0)
-        }
-
-        to {
-            transform: skewX(100)
-        }
-    }
-</style>
 
 <body>
+    <div>
+        <h1>Slide Show</h1>
+    </div>
     <div class="container">
         <div class="slides">
             <img src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="">
@@ -109,53 +36,6 @@
 </body>
 
 <!-- Script  -->
-<script>
-    let i = 0;
-    const allSlides = document.getElementsByClassName("slides");
-    showSlide(i)
-
-    function next() {
-        // increasing index
-        i = i + 1;
-        // check for valid index 
-        if (i > allSlides.length - 1) {
-            i = 0;
-        } else if (i < 0) {
-            i = allSlides.length - 1;
-        }
-        showSlide(i);
-    }
-    function prev() {
-        // decreasing index 
-        i = i - 1;
-        // check for valid index 
-        if (i > allSlides.length - 1) {
-            i = 0;
-        } else if (i < 0) {
-            i = allSlides.length - 1;
-        }
-        showSlide(i);
-    }
-
-
-    function showSlide(index) {
-        const allSlides = document.getElementsByClassName("slides");
-        const dots = document.getElementsByClassName("dot")
-
-        for (let i = 0; i < allSlides.length; i++) {
-            allSlides[i].style.display = "none";
-            dots[i].style.backgroundColor = "grey";
-        }
-        allSlides[index].style.display = "block";
-        dots[i].style.backgroundColor = "black";
-
-
-
-    }
-
-    setInterval(() => {
-        next()
-    }, 2000);
-</script>
+<script src="./scrypt.js"></script>
 
 </html>

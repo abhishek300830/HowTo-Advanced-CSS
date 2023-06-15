@@ -1,0 +1,68 @@
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: monospace;
+}
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .slides {
+        margin: auto;
+        display: none;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .next,
+    .prev {
+        cursor: pointer;
+        position: absolute;
+        top: 30%;
+        z-index: 10;
+        color: white;
+        font-size: 50px;
+        width: 60px;
+        height: 70px;
+        text-align: center;
+
+
+        &:hover {
+            background-color: grey;
+
+        }
+    }
+
+    .next {
+        right: 0;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .dots {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: -20px;
+
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: grey;
+        border-radius: 10px;
+    }
