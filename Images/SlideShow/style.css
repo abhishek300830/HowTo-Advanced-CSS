@@ -13,6 +13,7 @@ h1{
     .container {
         width: 100%;
         height: auto;
+        position: relative;
     }
 
     .slides {
@@ -23,12 +24,24 @@ h1{
     img {
         width: 100%;
     }
+    .number{
+        position: absolute;
+        color: white;
+        top: 10px;
+        left: 10px;
+    }
+    .caption{
+        position: absolute;
+        top: 85%;
+        right: 47%;
+        color: white;
+    }
 
     .next,
     .prev {
         cursor: pointer;
         position: absolute;
-        top: 30%;
+        top: 40%;
         z-index: 10;
         color: white;
         font-size: 50px;
